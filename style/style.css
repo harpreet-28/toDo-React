@@ -1,0 +1,30 @@
+h1{
+  text-align: center;
+  background: lightblue;
+}
+.submitButton{
+  border-radius: 10px;
+}
+.searchButton{
+  border-radius: 10px;
+}
+.searchBar{
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.filterTask{
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.checkBox{
+  margin-top: 10px;
+}
+
+.checkBoxLabel{
+  padding-top: 10px;
+}
+
+.removeButton{
+  background: lightblue;
+}
