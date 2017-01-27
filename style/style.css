@@ -1,12 +1,13 @@
 h1{
   text-align: center;
-  background: lightblue;
+  background: #005ce6;
+  border-radius: 10px;
 }
 .submitButton{
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .searchButton{
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .searchBar{
   border-radius: 10px;
@@ -23,8 +24,4 @@ h1{
 
 .checkBoxLabel{
   padding-top: 10px;
-}
-
-.removeButton{
-  background: lightblue;
 }

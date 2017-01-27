@@ -19,8 +19,10 @@ var SearchBar = React.createClass({
     return(
       <form onSubmit={this.handleSubmit}>
         <input type="text" value={this.state.item} onChange={this.onChange} className="searchBar col-sm-10" autoFocus />
-        <button type="submit" value="Add" className="submitButton col-sm-2">Add a Task</button>
+        <button type="submit" value="Add" className="submitButton col-sm- btn btn-primary">Add a Task</button>
       </form>
+
+
       )
     }
 });

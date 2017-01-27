@@ -18,29 +18,31 @@ var Main = React.createClass({
 
 },
     _onChecked: function(index){
-            !this.state.todos[index].isChecked ? (
-              this.state.todos[index].isChecked = true,
-              this.setState({todos: this.state.todos})
-            ):(
-              this.state.todos[index].isChecked = false,
-              this.setState({todos:this.state.todos})
-            ) //if statement was too clear, so i tried to confuse you here
+      console.log(this.state.todos)
+      var checkStatus = this.state.todos[index].isChecked;
+      var successColor = this.state.todos[index].style.background = 'green';
+            !checkStatus ? (checkStatus = true, this.setState({todos: this.state.todos})):(checkStatus = false, this.setState({todos:this.state.todos}))
+            console.log('checkbox function from main component!!')
           },
 
-  render: function(){
-    return(
-      <div>
-        <h1>ToDo App</h1>
-        <p>Add a new task</p>
-        <SearchBar onFormSubmit={this.updatedTodos}/>
-        <CheckBox />
-        <TaskBar todos={this.state.todos} onChecked={this._onChecked}/>
-        <SearchButton />
+    _onDelete: function(index){
+      console.log(this.state)
+    var splicedTodo =  this.state.todos.splice(index, 1)
+       this.setState({todos: this.state.todos})
+      },
 
-      </div>
-    )
+    render: function(){
+      return(
+        <div>
+          <h1>ToDo App</h1>
+          <p>Add a new task</p>
+          <SearchBar onFormSubmit={this.updatedTodos}/>
+          <CheckBox />
+          <TaskBar todos={this.state.todos} onChecked1={this._onChecked} handler={this._onDelete} />
+          <SearchButton />
+
+        </div>
+      )
   }
-
 })
-
 module.exports = Main;

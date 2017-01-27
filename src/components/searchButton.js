@@ -8,7 +8,7 @@ var SearchButton = React.createClass({
     return(
       <div>
         <input type="text" className="filterTask col-sm-10" />
-        <button type="submit" bsStyle="primary" className="searchButton col-sm-2" >Search</button>
+        <button type="submit"  className="searchButton col-sm-2 btn btn-primary" >Search</button>
       </div>
     )
   }
