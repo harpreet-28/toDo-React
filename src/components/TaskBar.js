@@ -8,9 +8,12 @@ var TaskBar = React.createClass({
       return(
         <tr key={index}>
           <td>{index +1}</td>
-          <td>{todo}</td>
-          <td onClick={this.props.onChecked1}><input type="checkbox"  readOnly checked={todo.isChecked} className="checkBoxList" /></td>
-          <td><button className="btn btn-warning removeTodo" onClick={function(){this.props.handler(index)}.bind(this)}>Remove</button></td>
+          <td>{todo.item}</td>
+          <td onClick={function(){this.props.onChecked1(index)}.bind(this)}>
+            <input type="checkbox"  readOnly
+              checked={todo.isChecked} className="checkBoxList" /></td>
+          <td><button className="btn btn-warning removeTodo"
+            onClick={function(){this.props.handler(index)}.bind(this)}>Remove</button></td>
         </tr>
       )
     }.bind(this));
